@@ -57,9 +57,17 @@ claude mcp add flowplan --transport http http://127.0.0.1:3100/mcp
 Sau đó nhờ agent:
 
 ```text
-Hãy lập kế hoạch làm [việc bạn muốn] và hiển thị lên FlowPlan.
-Dùng công cụ FlowPlan: gọi create_plan rồi add_cards.
-Đừng code vội; chỉ lập kế hoạch để tôi duyệt trước.
+Hãy lập kế hoạch làm [việc bạn muốn làm] và hiển thị lên FlowPlan.
+
+Yêu cầu:
+- Mỗi bước là một thẻ FlowPlan gồm: tiêu đề, mô tả, loại (research/planning/create/edit/test), file liên quan.
+- Mỗi thẻ phải nói rõ dùng skill, plugin, mcp nào, nếu trong quá trình còn thiếu tự mò thêm skill
+- Các thẻ phải có thứ tự phụ thuộc rõ ràng.
+- Đừng bắt đầu code vội; chỉ lập kế hoạch để tôi duyệt trước.
+- Dùng công cụ FlowPlan: gọi create_plan, sau đó add_cards. Nếu thêm nhiều thẻ cùng lúc, dùng dependencies "$0", "$1"... để trỏ đến thẻ trước đó.
+----
+Kế hoạch đã duyệt. Bắt đầu làm theo đúng thứ tự các thẻ trên FlowPlan.
+Sau mỗi bước, cập nhật lại thẻ nếu cần.
 ```
 
 ## Dữ liệu
