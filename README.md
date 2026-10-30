@@ -4,6 +4,15 @@ Bản build Windows 64-bit của [FlowPlan](https://github.com/Bariskau/flowplan
 
 > Đây là **bản build cộng đồng**, không phải bản phát hành chính thức của tác giả FlowPlan.
 
+## Checksums (SHA256)
+
+| File | SHA256 |
+|---|---|
+| `FlowPlan-1.3.2-windows-x64.zip` (app) | `6b2b7f5a493e028289699da6efe63b9abe61578aee6767259bd15ef00df0d981` |
+| `flowplan-windows-skill.zip` (skill) | `f05a112a75774fa82c3804f331a6975239ba992ef0c28eecb115ad042bcd08c7` |
+
+Các hash trên khớp với file đang phát hành; có thể kiểm tra lại bằng `sha256sum` hoặc `Get-FileHash`.
+
 ## Tải về
 
 - **[Bản mới nhất](https://github.com/kimducanh27-cpu/flowplan-windows/releases/latest)**
@@ -82,7 +91,7 @@ Thư mục [`skill/flowplan-windows/`](skill/flowplan-windows/) chứa skill đ�
 
 Skill gồm quy trình build Rust GNU/MSYS2, 2 patch bắt buộc (`custom-protocol`, GUI subsystem), script đóng gói ZIP + SHA256, smoke test MCP và publish release.
 
-SHA256 của file zip: `f05a112a75774fa82c3804f331a6975239ba992ef0c28eecb115ad042bcd08c7`
+SHA256 của file zip: `f05a112a75774fa82c3804f331a6975239ba992ef0c28eecb115ad042bcd08c7` ([file .sha256](skill/flowplan-windows-skill.zip.sha256))
 
 ## Giấy phép
 
