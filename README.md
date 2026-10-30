@@ -69,6 +69,21 @@ Dùng công cụ FlowPlan: gọi create_plan rồi add_cards.
 - Bản portable, không có updater tự động.
 - Repo này chỉ phát hành binary; source nằm ở upstream.
 
+## Skill cho AI agent (Qoder)
+
+Thư mục [`skill/flowplan-windows/`](skill/flowplan-windows/) chứa skill để agent khác tự động build, update, đóng gói và publish FlowPlan Windows.
+
+**Cài nhanh:**
+
+1. Tải [`flowplan-windows-skill.zip`](skill/flowplan-windows-skill.zip) (hoặc copy thư mục `skill/flowplan-windows`).
+2. Giải nén vào `C:\Users\<bạn>\.qoder\skills\` để có `...\.qoder\skills\flowplan-windows\`.
+3. Chạy `/skills reload` hoặc khởi động lại Qoder.
+4. Gọi `/flowplan-windows`, hoặc nói: “Cập nhật FlowPlan Windows lên bản mới nhất”.
+
+Skill gồm quy trình build Rust GNU/MSYS2, 2 patch bắt buộc (`custom-protocol`, GUI subsystem), script đóng gói ZIP + SHA256, smoke test MCP và publish release.
+
+SHA256 của file zip: `f05a112a75774fa82c3804f331a6975239ba992ef0c28eecb115ad042bcd08c7`
+
 ## Giấy phép
 
 MIT. Xem [LICENSE](LICENSE). FlowPlan thuộc về tác giả upstream Barış ÖZER và contributors.
